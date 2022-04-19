@@ -7,7 +7,7 @@ from docx2pdf import convert
 convert ('file')
 
 
-#convert pdf to docx 
+# convert pdf to docx 
 from pdf2docx import Converter
 pdf_file = 'file'
 docx_file = 'file'
@@ -15,7 +15,7 @@ docx_file = 'file'
 cv = Converter(pdf_file)
 cv.convert(docx_file)
 
-#convert file to txt
+# convert file to txt
 from PyPDF2 import PdfFileReader, PdfFileWriter
 from pathlib import Path
 import re
