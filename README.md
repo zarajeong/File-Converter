@@ -22,13 +22,13 @@ import re
 #Create file reader object
 pdf = PdfFileReader('file')
 
-#Grab the Page(s)
+# Grab the Page(s)
 page_1_object = pdf.getPage(0)
 
-#Extract Text
+# Extract Text
 page_1_text = page_1_object.extractText()
 
-#Combine the text 
+# Combine the text 
 with Path('file').open(mode='w') as output_file:
     text = ''   
     for page in pdf.pages:
