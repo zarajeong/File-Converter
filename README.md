@@ -6,10 +6,12 @@ This is a basic program to convert your file quickly
 from docx2pdf import convert
 convert ('file')
 
+
 #convert pdf to docx 
 from pdf2docx import Converter
 pdf_file = 'file'
 docx_file = 'file'
+
 cv = Converter(pdf_file)
 cv.convert(docx_file)
 
@@ -17,12 +19,16 @@ cv.convert(docx_file)
 from PyPDF2 import PdfFileReader, PdfFileWriter
 from pathlib import Path
 import re
+
 #Create file reader object
 pdf = PdfFileReader('file')
+
 #Grab the Page(s)
 page_1_object = pdf.getPage(0)
+
 #Extract Text
 page_1_text = page_1_object.extractText()
+
 #Combine the text 
 with Path('file').open(mode='w') as output_file:
     text = ''   
